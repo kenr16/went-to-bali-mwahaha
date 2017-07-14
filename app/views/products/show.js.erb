@@ -1,1 +1,7 @@
+$(".right-col").hide();
 $(".right-col").html("<%= j render(partial: 'show') %>");
+$(".right-col").fadeIn(2000);
+
+$("#click_to_hide").click(function() {
+  $(".right-col").fadeOut(1000);
+});
