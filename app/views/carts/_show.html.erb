@@ -1,7 +1,7 @@
 <h1>Shopping Cart</h1>
 
-<% if @order_items.any? %>
-  <% @order_items.each do |item| %>
+<% if @order.order_items.any? %>
+  <% @order.order_items.each do |item| %>
     <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></p>
     <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
   <% end %>

@@ -30,9 +30,18 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'tether-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'materialize-sass'
 gem 'rails_admin', '~> 1.2'
+gem "paperclip", "~> 5.0.0"
+# gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+
+gem 'rest-client'
+gem 'httparty'
+
+gem 'stripe'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -40,7 +49,14 @@ gem 'rails_admin', '~> 1.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'launchy'
   gem 'pry'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'simplecov', require: false
+  gem 'dotenv-rails'
   gem 'faker'
 end
 
