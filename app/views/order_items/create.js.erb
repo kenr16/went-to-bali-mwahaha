@@ -1,8 +1,7 @@
-// $("#cart_items_total").html("<%= j render(partial: 'create') %>");
+$("#cart_items").html("<%= j render(partial: 'create') %>");
 
-// $("input#order_item_quantity").each(function( index ) {
-//   $(this).val(null)
-// });
+$("input#order_item_quantity").each(function( index ) {
+  $(this).val(1)
+});
 
-alert("You have reached the right AJAX file");
 $('.right-col').html("<%= j render(partial: '/carts/show') %>");

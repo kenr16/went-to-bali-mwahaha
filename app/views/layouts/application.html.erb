@@ -13,7 +13,8 @@
         <% if admin %>
         <li><%= link_to "New Product", new_product_path %></li>
         <% end %>
-        <li><%= link_to "Cart | Total items: #{ cart_items }", cart_path %></li>
+        <li><%= link_to "Cart | Total items: ", cart_path %></li>
+        <li><span id="cart_items"><%= "#{ current_order_quantity }" %></span></li>
         <li><%= link_to "See all products", products_path %></li>
         <% if current_user %>
           <li><%= current_user.email %></li>
