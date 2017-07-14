@@ -3,5 +3,3 @@ $("#cart_items").html("<%= j render(partial: 'create') %>");
 $("input#order_item_quantity").each(function( index ) {
   $(this).val(1)
 });
-
-$('.right-col').html("<%= j render(partial: '/carts/show') %>");
