@@ -13,4 +13,6 @@ class Order < ApplicationRecord
     self.status = 2
     self.save
   end
+
+  
 end
