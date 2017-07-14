@@ -5,8 +5,8 @@ class OrderItem < ApplicationRecord
   validates :quantity, numericality: { only_integer: true }
   validates_inclusion_of :quantity, :in => 1..100
 
-  validates :product_id, presence: true
-  validates :order_id, presence: true
+  # validates :product_id, presence: true
+  # validates :order_id, presence: true
 
 
 

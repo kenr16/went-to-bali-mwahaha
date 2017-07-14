@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Week3CodeReview</title>
+    <title>Ken's Grocery Store</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,13 +10,16 @@
   <nav>
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if admin %>
+        <li><%= link_to "New Product", new_product_path %></li>
+        <% end %>
         <li><%= link_to "Cart | Total items: #{ cart_items }", cart_path %></li>
         <li><%= link_to "See all products", products_path %></li>
         <% if current_user %>
           <li><%= current_user.email %></li>
           <li><%= link_to "Sign out", '/sign_out' %></li>
         <% else %>
-          <li><%= link_to "Sign up", 'sign_up' %></li>
+          <li><%= link_to "Sign up", '/sign_up' %></li>
           <li><%= link_to "Sign in", '/sign_in' %></li>
         <% end %>
       </ul>
@@ -28,7 +31,15 @@
       <%= content_tag :div, msg, id: "flash_#{name}" %>
     <% end %>
     <div class="container">
-      <%= yield %>
+      <div class = "row">
+        <div class="col-md-6">
+          <%= yield %>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+
+      </div>
     </div>
   </body>
 </html>

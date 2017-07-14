@@ -16,7 +16,22 @@ class ApplicationController < ActionController::Base
     session[:order_id] ? Order.find(session[:order_id]) : Order.new
   end
 
-  def authorize
-    redirect_to '/sign_in' unless admin
+  def authorize_admin
+    if !current_user || current_user.admin == false
+      flash[:alert] = "You aren't authorized to visit that page.  This requires an administrator account."
+      redirect_to '/sign_in'
+    end
   end
+
+  def authorize_user
+    if !current_user
+      flash[:alert] = "You aren't authorized to visit that page."
+      redirect_to '/sign_up'
+    end
+  end
+
+
+
+
+
 end
