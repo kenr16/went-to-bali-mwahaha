@@ -1,3 +1,4 @@
+#Users controller allows for user creation.
 class UsersController < ApplicationController
 
   def new

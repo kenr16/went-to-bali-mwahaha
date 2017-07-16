@@ -1,3 +1,4 @@
+#Products controller allows for full CRUD functionality of products objects.
 class ProductsController < ApplicationController
   before_filter :authorize_admin, except: [:index, :show, :home]
 

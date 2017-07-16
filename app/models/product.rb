@@ -1,3 +1,4 @@
+#The product class keeps track of products availible.
 class Product < ApplicationRecord
   has_many :order_items
   has_attached_file :image,

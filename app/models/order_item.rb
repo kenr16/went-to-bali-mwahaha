@@ -1,3 +1,4 @@
+#Class OrderItem is an object for each individual type and quantitiy of item in the basket.
 class OrderItem < ApplicationRecord
   belongs_to :order
   belongs_to :product

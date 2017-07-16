@@ -1,3 +1,4 @@
+#Allows for creating, updating and destroying functionality for database objects.
 class OrderItemsController < ApplicationController
 
   def create

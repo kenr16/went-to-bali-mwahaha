@@ -1,3 +1,4 @@
+#Allows for routing and for and finalizing carts.
 class CartsController < ApplicationController
 
   def show
@@ -6,7 +7,7 @@ class CartsController < ApplicationController
     end
     @order_items = current_order.order_items
     respond_to do |format|
-      format.html { redirect_to products_url }
+      format.html { redirect_to "/" }
       format.js
     end
   end

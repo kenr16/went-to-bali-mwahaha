@@ -67,6 +67,9 @@ Support and contact details
 Contact
 For further help and support, please contact Ken Rutan vis his current github account, email address will not be listed here for privacy reasons.
 
+Known bugs
+Cannot add items to the cart without logging in first.
+
 License
 
 MIT © 2017 Ken Rutan

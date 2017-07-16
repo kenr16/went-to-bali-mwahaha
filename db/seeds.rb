@@ -1,3 +1,4 @@
+#Seed is the class that will seed the database with random items for sale, as well as two fake accounts, a user and an admin.
 class Seed
 
   def self.begin

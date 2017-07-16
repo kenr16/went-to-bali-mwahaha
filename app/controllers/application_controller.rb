@@ -1,3 +1,4 @@
+#Application controller allows us to define helper methods that will be availible as inherrited methods in other controllers.
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user

@@ -1,3 +1,4 @@
+#Sessions controller is used for creating and destroying sessions, ie: logging in and logging out.
 class SessionsController < ApplicationController
 
   def new

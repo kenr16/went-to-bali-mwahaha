@@ -1,3 +1,4 @@
+#Class order is the total order in the cart.
 class Order < ApplicationRecord
   has_many :order_items
   belongs_to :user, optional: true
