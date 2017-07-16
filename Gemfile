@@ -42,6 +42,7 @@ gem 'rest-client'
 gem 'httparty'
 
 gem 'stripe'
+gem 'yard'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
